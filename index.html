@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>IMDB</title>
+    <style>
+    .social-part .fa{
+    padding-right:20px;
+    font-size: 19px;
+    }
+    .social-part .fa:hover{
+    color: rgb(1, 121, 11);
+    }
+ ul li a{
+     font-size: 12px;
+     font-weight: 700;
+     margin-right: 15px;   
+} 
+input[type="text"], textarea, .input-group-text  {
+background-color : rgb(237, 233, 227); 
+padding: .225rem .75rem;
+}
+.bgsearch {
+    background-color: rgb(158, 147, 138);
+}
+.colo1 {
+  background-color: rgb(17, 10, 10);
+
+ opacity: 0.87;
+ min-height: 400px; 
+}
+.bg {  
+background-image:url("images/bg1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+border-bottom: 5px solid yellow;
+}
+.colo2 {
+    background-color: rgba(230, 86, 3, 1);
+    min-height: 400px;
+    color:white;   
+}
+.colo3 {
+    color: lightgrey;
+}
+.colo4  {
+    color:yellow;
+}
+.colo5 {
+    background-color:rgb(230, 230, 230);
+}
+.colo5 img {
+    border:6px solid white;
+}
+h6 {
+    font-size: 12.5px;
+   }
+
+.colo2 p .fa {
+    font-size: 13px;
+}
+.stars img{
+    width: 26px;
+    height: 26px;
+    margin: 0 2px;
+    border-radius: 26px;
+}
+.stars, .fa {
+    font-size: 28px;
+    
+}
+.arrowsleft {
+    position: absolute;
+    top: 270px;
+    left: 75px;
+}
+.arrowsright {
+    position: absolute;
+    top: 270px;
+    right: 75px;
+}
+.sml {
+    font-size: 10px;
+    margin-left: -10px;
+}
+/* Progress bar */
+
+.radialProgressBar {
+  border-radius: 50%;  
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  margin: 20px 0;
+  float:left;
+}
+.radialProgressBar .overlay {
+  border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  margin: auto;
+  background: rgb(230, 86, 3);
+  text-align: center;
+  padding-top: 26%;
+}
+.overlay {
+    font-weight: 500;
+    color:yellow;
+    font-size: 19px;
+}
+.progress-80 {
+  background-image: -webkit-linear-gradient(left, yellow 50%, transparent 50%), -webkit-linear-gradient(108deg, #028cd5 50%, #ddd 50%);
+  background-image: linear-gradient(90deg, yellow 50%, transparent 50%), linear-gradient(-18deg, yellow 50%, #ddd 50%);
+}
+@media screen and (max-width: 680px) {
+  .arrowsleft, .arrowsright  {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo1.png" width="80"  alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">MOVIES <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TV SERIES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NEWS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PHOTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">EVENTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TRAILERS</a>
+              </li>
+           
+           
+          </ul>
+
+          <form class="form-inline col-lg-6">
+            <div class="input-group col-lg-11">
+                <input type="text" class="form-control" placeholder="Find Movies, Tv shows,Celebrites and more... " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">              
+                    <span class="input-group-text  dropdown-toggle" id="basic-addon2"> All</i></span>  <span class="caret"></span>
+                    
+                
+                  <span class="input-group-text bgsearch" id="basic-addon2"> <i class="fa fa-search"></i></span>
+                </div>
+              </div>
+          </form>
+
+
+    <div class="social-part">
+        <i class="fa fa-star" aria-hidden="true"></i>       
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+      </div>
+         
+        </div>
+      </nav>
+<!-- middle section-->
+    <div class="container-fluid bg">
+        <div class="row colo1">
+           <div class="arrowsleft"> <i class="fa fa-chevron-left fa-4x font"></i></div>
+<div class="container colo2">
+    <div class="row p-3">
+<div class="col-lg-8">
+    <div class="middle-text">
+        <h4>MAD MAX: FURY ROAD <sub class="colo4">(2015)</sub> </h4>
+        <p><span class="colo3">R . 120 min</span> . Action, Adventure, Sci-Fi 15 May 2015(USA)</p>
+        <div class="row">
+        <div class="col-lg-2">
+            <div class="radialProgressBar progress-80">
+                <div class="overlay">8.7</div>
+              </div>
+            
+            </div>
+        <div class="col-lg-10">
+            <p><span>Your rating:
+                <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span><i class="fa fa-star"></i></span>
+                 <span class="colo4"><i class="fa fa-star"></i></span>
+                 <span class="colo4"><i class="fa fa-star"></i></span>
+                 <span class="colo4"><i class="fa fa-star"></i></span>
+                 <span class="colo4"><i class="fa fa-star"></i></span>
+                  <span><b>6</b>/10</span> 
+               </span></p>
+               <p>Ratings:8.7/10from  137,182users MetaScore:89/100</p>
+               <p>Reviews:697 user   .  502critic . 46 from Metacritic.com</p>
+            </div>
+        </div>
+               <p>Summary</p>
+               <p>In a stark desert landscape where humanity is broken, two rebels just might be able to restore order: Max, a man of action and of few words, and Furiosa, a woman of action who is looking to make it back to her childhood homeland.</p>
+               <h6>Director: <span class="colo4">George Miller </span> . Writers:  
+                <span class="colo4">George Miller, Brendan McCarthy, Nick Lathourts</span> 
+                . Stars: <span class="stars"><img src="images/star01.jpg"> <img src="images/star02.jpg"> <img src="images/star03.jpg"><img src="images/star04.jpg"><img src="images/star05.jpg"> <i class="fa fa-flickr"></i> </span></h6>
+                
+                
+                <a class="btn btn-small btn-warning m-2" href="#">
+                    <i class="fa fa-plus"></i> WATCHLIST <i class="fa fa-caret-down"></i></a> 
+                    <a class="btn btn-small btn-light  m-2" href="#">
+                        <i class="fa fa-play"></i> WATCH TRAILER</a>
+                      
+     
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-12 col-sm-12 "><img src="images/madmax.jpg" class="pull-right img-fluid"></div>
+</div>
+</div>
+<div class="arrowsright">
+<i class="fa fa-chevron-right fa-4x font1"></i> 
+</div>
+     
+</div>
+    </div>
+<!-- bottom section-->
+    <div class="container-fluid pt-3 colo5">
+        <div class="container">
+        <h5>Now Playing <span class="small">Box office</span></h5>
+        
+        </span>
+          <div class="row d-flex justify-content-between pt-3">
+                    <div class="col-lg-2">
+                      <div class="card">
+                      <img src="images/fantastic.jpg" class="img-fluid img">
+                      <div class="card-body">
+                      <div class="card-text">
+                      <p class="sml">FANTASTIC FOUR<br>
+                        525.7M</p>
+                      </div>
+                      </div> 
+                      </div>
+                      </div>
+                      <div class="col-lg-2">
+                          <div class="card">
+                          <img src="images/uncle.jpg" class="img-fluid img">
+                          <div class="card-body">
+                          <div class="card-text">
+                          <p class="sml"> THE MAN FROM UNCLE<br>
+                            528.5M  </p>
+                          </div>
+                      </div> 
+                      </div>
+                      </div>
+                          <div class="col-lg-2">
+                              <div class="card">
+                              <img src="images/shaun.jpg" class="img-fluid img">
+                              <div class="card-body">
+                                  <div class="card-text">
+                              <p class="sml">SUAUN THE SHEEP MOVIE<br>
+                                511.2M </p>
+                              </div>
+                          </div> 
+                          </div>
+                          </div>
+                              <div class="col-lg-2">
+                                  <div class="card">
+                                  <img src="images/gift.jpg" class="img-fluid img">
+                                  <div class="card-body">
+                                      <div class="card-text">
+                                  <p class="sml">THE GIFT<br>
+                                    513.2M  </p>
+                                  </div>
+                              </div> 
+                          </div>
+                          </div>
+                          <div class="col-lg-2">
+                              <div class="card">
+                              <img src="images/mission.jpg" class="img-fluid img">
+                              <div class="card-body">
+                                  <div class="card-text">
+                              <p class="sml">MISSION:IMPOSSIBL 5<br>
+                                517.7M  </p>
+                              </div>
+                          </div> 
+                      </div>
+                      </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
